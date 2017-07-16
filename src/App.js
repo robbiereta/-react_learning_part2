@@ -5,41 +5,37 @@ class App extends Component {
 
   render() {
     return (
-			<Parent>
-        <div className="childA"></div>
-      
-
-      </Parent>
+			<Buttons>
+        <button value="A">A</button>
+        <button value="B">B</button>
+        <button value="C">C</button>
+      </Buttons>
     );
   }
 }
 
-class Parent extends React.Component {
-
+class Buttons extends React.Component {
+  constructor(){
+    super();
+    this.state = {selected: 'None'}
+  }
+  selectItem(selected){
+    this.setState({selected})
+  }
+    // para tab interface,nav component,radio group
     render() {
+      let fn = child =>
+        React.cloneElement(child, {
+        onClick: this.selectItem.bind(this, child.props.value)
+      })
+      let items= React.Children.map(this.props.children, fn);
+        return (
+            <div>
+              <h2> You have Selected {this.state.selected}</h2>
+              {items}
+            </div>
 
-        //con .map
-        // let items = React.Children
-        // .map(this.props.children, child => child)
-
-        // con .toArray
-        // let items = React.Children.toArray(this.props.children)
-        // console.log(items)
-
-        //con .forEach
-        // let items = React.Children
-        //   .forEach(this.props.children, child => console.log(child.props.className))
-        //   console.log(items);
-
-        //solo para un solo child
-        let items= React.Children.only(this.props.children)
-        console.log(items);
-
-
-        // para 2 children
-        // let items=this.props.children.map(child => child)
-        // console.log(items)
-        return null
+        )
     }
 }
 
