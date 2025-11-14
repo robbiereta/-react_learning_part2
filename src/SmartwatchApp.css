@@ -27,124 +27,11 @@
   margin: 0;
 }
 
-.status-card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.status-indicator {
-  font-size: 2rem;
-  animation: pulse 2s infinite;
-}
-
-.status-indicator.connected {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.status-text {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #333;
-  margin: 0;
-  flex: 1;
-}
-
-.controls {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  flex: 1;
-  min-width: 150px;
-  padding: 15px 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.btn:active {
-  transform: translateY(0);
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-}
-
-.btn-secondary {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
-}
-
-.btn-danger {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  color: white;
-}
-
 .data-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
   margin-bottom: 30px;
-}
-
-.data-card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.data-card:hover {
-  transform: translateY(-5px);
-}
-
-.data-icon {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.data-label {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.data-value {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
 }
 
 .info-section {
@@ -196,14 +83,6 @@
 
   .app-header h1 {
     font-size: 2rem;
-  }
-
-  .controls {
-    flex-direction: column;
-  }
-
-  .btn {
-    min-width: 100%;
   }
 
   .data-grid {
